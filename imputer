@@ -1,0 +1,12 @@
+from sklearn.impute import SimpleImputer
+import numpy as np
+
+def Imputer():
+    Im = SimpleImputer(missing_values=np.nan,strategy="mean")
+    data = Im.fit_transform([[4,5,6],[8,np.nan,6],[8,6,9]])
+    print(data)
+
+
+
+if __name__ == '__main__':
+    Imputer()
